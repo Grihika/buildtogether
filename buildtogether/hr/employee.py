@@ -26,7 +26,7 @@ def sync_bank_account(doc, method):
 	existing = frappe.db.get_value(
 		"Bank Account",
 		{"party_type": "Employee", "party": doc.name},
-		"name" 
+		"name"
 	)
 
 	if existing:
