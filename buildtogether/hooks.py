@@ -140,10 +140,18 @@ app_license = "mit"
 
 doc_events = {
     "Employee": {
+<<<<<<< HEAD
         "validate": "buildtogether.hr.employee.validate_names"
     }
 }
 
+=======
+        "validate": "buildtogether.hr.employee.validate_names",
+        "on_update": "buildtogether.hr.employee.sync_bank_account"
+    }
+}
+ 
+>>>>>>> c4e4f17 (BT-EMP-05: sync_bank_account hook (untestable — pending BT-EMP-02 branch_code field))
 # Scheduled Tasks
 # --------------- 
 
