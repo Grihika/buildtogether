@@ -1,0 +1,13 @@
+[
+ {
+  "cc_email": "hr@buildtogether.co.in",
+  "default_holiday_list": "",
+  "docstatus": 0,
+  "doctype": "BuildTogether Settings",
+  "enable_interview_emails": 1,
+  "enable_salary_slip_emails": 1,
+  "modified": "2026-07-16 09:54:42.589968",
+  "name": "BuildTogether Settings",
+  "sender_name": "BuildTogether HR"
+ }
+]
