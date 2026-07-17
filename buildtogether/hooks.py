@@ -140,9 +140,12 @@ app_license = "mit"
 
 doc_events = {
     "Employee": {
-
         "validate": "buildtogether.hr.employee.validate_names",
         "on_update": "buildtogether.hr.employee.sync_bank_account"
+    },
+    "Interview Feedback": {
+        "validate": "buildtogether.recruitment.feedback.enforce_interviewer",
+        "on_submit": "buildtogether.recruitment.feedback.sync_applicant_status"
     }
 }
 
