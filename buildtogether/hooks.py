@@ -152,8 +152,20 @@ doc_events = {
 fixtures = [
     {
         "dt": "BuildTogether Settings"
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [["name", "in", [
+            "Employee-custom_ifsc_code",
+            "Employee-custom_bank_account",
+            "Employee-custom_biometric_id"
+        ]]]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [["doc_type", "in", ["Employee", "Bank Account"]]]
     }
-]
+] 
  
 # --------------- 
 
