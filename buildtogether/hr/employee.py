@@ -46,3 +46,21 @@ def sync_bank_account(doc, method):
 	ba.save(ignore_permissions=True) 
 
 	doc.db_set("custom_bank_account", ba.name)
+
+@frappe.whitelist()
+def create_bank_account(employee):
+	"""
+	API: buildtogether/hr/employee.py, POST
+	Idempotently create/link a Bank Account for the given employee.
+	Reuses sync_bank_account logic to avoid duplicating create/link rules.
+	"""
+	doc = frappe.get_doc("Employee", employee)
+	sync_bank_account(doc, "manual_api_call")
+
+	bank_account = frappe.db.get_value(
+		"Bank Account",
+		{"party_type": "Employee", "party": employee},
+		"name"
+	)
+
+	return {"bank_account": bank_account}
