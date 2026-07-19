@@ -163,7 +163,7 @@ fixtures = [
     },
     {
         "dt": "Property Setter",
-        "filters": [["doc_type", "in", ["Employee", "Bank Account"]]]
+        "filters": [["doc_type", "in", ["Employee", "Bank Account", "Payroll Entry"]]]
     }
 ] 
  
