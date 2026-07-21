@@ -164,6 +164,11 @@ fixtures = [
     {
         "dt": "Property Setter",
         "filters": [["doc_type", "in", ["Employee", "Bank Account", "Payroll Entry"]]]
+        "filters": [["doc_type", "in", ["Employee", "Bank Account"]]]
+    },
+    {
+        "dt": "Web Form",
+        "filters": [["name", "=", "employee-onboarding"]]
     }
 ] 
  
